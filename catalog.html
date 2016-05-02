@@ -3,27 +3,28 @@
   <head>
     <meta charset="utf-8">
     <title>Нёрдс</title>
+    <link href="style.css" rel="stylesheet">
   </head>
   <body>
     <header class="main-header">
       <div class="container">
-        <div class="top-header">
-          <nav class="main-navigator">
+        <div class="top-header clearfix">
+          <div class="header-logo">
+            <a href="#"><img src="img/header-logo.png" alt="Нердс" width="139" height="56"></a>
+          </div>
+          <nav class="main-navigation">
             <ul>
               <li>
-                <a href="#"><img src="img/header-logo.png" alt="Нердс" width="139" height="56"></a>
+                <a href="#">Студия</a>
               </li>
               <li>
-               <a href="#">Студия</a>
+                <a href="#">Клиенты</a>
               </li>
               <li>
-               <a href="#">Клиенты</a>
+                <a href="#">Магазин</a>
               </li>
               <li>
-               <a href="#">Магазин</a>
-              </li>
-              <li>
-               <a href="#">Контакты</a>
+                <a href="#">Контакты</a>
               </li>
             </ul>
           </nav>
@@ -33,128 +34,135 @@
           </div>
         </div>
         <div class="bottom-header">
-            <h1>добро пожаловать в магазин готовых макетов.</h1>
+          <h1>добро пожаловать в магазин<br>
+             готовых макетов.</h1>
+        </div>
+      </header>
+      <main class="main-block">
+        <div class="above-map container clearfix">
+          <div class="site-selection">
+            <form action="http://nerds.ru" method="post">
+              <b>Стоимость:</b>
+              <input type="range" min="0" max="15000" step="1">
+              <lable for="cost">От</lable><input type="text" id="cost" value="0">
+              <lable for="cost">до</lable><input type="text" id="cost" value="15000">
+              <b class="selection-grid">Производители:</b>
+              <input type="radio" name="site-grid" value="adaptive" id="adaptive"><label for="adaptive">Адаптивная</label>
+              <input type="radio" name="site-grid" value="fixed" id="fixed" checked><label for="fixed">Фиксированная для ухода</label>
+              <input type="radio" name="site-grid" value="elastic" id="elastic"><label for="elastic">Резиновая</label>
+              <b class="selection-features">Особенности:</b>
+              <input type="checkbox" id="slider" checked><label for="slider">Слайдер</label>
+              <input type="checkbox" id="block"><label for="block">Блок преимуществ</label>
+              <input type="checkbox" id="news" checked><label for="news">Новости</label>
+              <input type="checkbox" id="gallery"><label for="gallery">Галерея</label>
+              <input type="checkbox" id="basket"><label for="basket">Корзина</label>
+              <button type="submit">Показать</button>
+            </form>
           </div>
-      </div>
-    </header>
-    <main class="container">
-      <div class="site-selection">
-        <form action="http://nerds.ru" method="post">
-          <b>Стоимость:</b>
-            <input type="range" min="0" max="15000" step="1">
-            <lable for="cost">От</lable><input type="text" id="cost" value="0">
-            <lable for="cost">до</lable><input type="text" id="cost" value="15000">
-          <b class="selection-grid">Производители:</b>
-            <input type="radio" name="site-grid" value="adaptive" id="adaptive"><label for="adaptive">Адаптивная</label>
-            <input type="radio" name="site-grid" value="fixed" id="fixed" checked><label for="fixed">Фиксированная для ухода</label>
-            <input type="radio" name="site-grid" value="elastic" id="elastic"><label for="elastic">Резиновая</label>
-          <b class="selection-features">Особенности:</b>
-            <input type="checkbox" id="slider" checked><label for="slider">Слайдер</label>
-            <input type="checkbox" id="block"><label for="block">Блок преимуществ</label>
-            <input type="checkbox" id="news" checked><label for="news">Новости</label>
-            <input type="checkbox" id="gallery"><label for="gallery">Галерея</label>
-            <input type="checkbox" id="basket"><label for="basket">Корзина</label>
-            <button type="submit">Показать</button>
-        </form>
-      </div>
-      <div class="site-catalog">
-        <div class="catalog-select">
-          <p>Сортировать:</p>
-            <ul>
-              <li><a href="#">по цене</a></li>
-              <li><a href="#">по типу</a></li>
-              <li><a href="#">по функционалу</a></li>
-              <li><img src="img/icon-down.png" alt="down-icon" width="11" height="10"></li>
-              <li><img src="img/icon-up.png" alt="up-icon" width="11" height="10"></li>
+          <div class="site-catalog">
+            <div class="catalog-select">
+              <p>Сортировать:</p>
+              <ul>
+                <li><a href="#">по цене</a></li>
+                <li><a href="#">по типу</a></li>
+                <li><a href="#">по функционалу</a></li>
+                <li><img src="img/icon-down.png" alt="down-icon" width="11" height="10"></li>
+                <li><img src="img/icon-up.png" alt="up-icon" width="11" height="10"></li>
+              </ul>
+            </div>
+            <div class="catalog-element">
+              <div class="bullets"><span></span><span></span><span></span>
+              </div>
+              <img src="img/catalog-item1.jgp"  width="240" height="240">
+              <div class="catalog-hover">
+                <h4>Aviator</h4>
+                <p>Односторонний макет с авторским дизайном</p>
+                <a href="#">8000 Р.</a>
+              </div>
+            </div>
+            <div class="catalog-element">
+              <div class="bullets"><span></span><span></span><span></span></div>
+              <img src="img/catalog-item2.jgp"  width="240" height="240">
+              <div class="catalog-hover">
+                <h4>Sunset</h4>
+                <p>Интернет-магазин с личным кабинетом</p>
+                <a href="#">10000 Р.</a>
+              </div>
+            </div>
+            <div class="catalog-element">
+              <div class="bullets"><span></span><span></span><span></span></div>
+              <img src="img/catalog-item3.jgp"  width="240" height="240">
+              <div class="catalog-hover">
+                <h4>Forte</h4>
+                <p>Отличный макет для личного блога</p>
+                <a href="#">5000 Р.</a>
+              </div>
+            </div>
+            <div class="catalog-element">
+              <div class="bullets"><span></span><span></span><span></span></div>
+              <img src="img/catalog-item4.jgp"  width="240" height="240">
+              <div class="catalog-hover">
+                <h4>Modern organic thai</h4>
+                <p>Сайт для ресторана быстрого питания</p>
+                <a href="#">12000 Р.</a>
+              </div>
+            </div>
+            <div class="catalog-element">
+              <div class="bullets"><span></span><span></span><span></span></div>
+              <img src="img/catalog-item5.jgp"  width="239" height="240">
+              <div class="catalog-hover">
+                <h4>Avenue</h4>
+                <p>Макет для блога о путешествиях</p>
+                <a href="#">8000 Р.</a>
+              </div>
+            </div>
+            <div class="catalog-element">
+              <div class="bullets"><span></span><span></span><span></span></div>
+              <img src="img/catalog-item6.jgp"  width="239" height="240">
+              <div class="catalog-hover">
+                <h4>Dovetail</h4>
+                <p>Интернет-магазин с галереей товаров</p>
+                <a href="#">14000 Р.</a>
+              </div>
+            </div>
+            <ul class="pagination">
+              <li>
+                <a class="active" href="#">1</a>
+              </li>
+              <li>
+                <a href="#">2</a>
+              </li>
+              <li>
+                <a href="#">3</a>
+              </li>
+              <li>
+                <a href="#">Следующая</a>
+              </li>
             </ul>
-        </div>
-        <div class="catalog-element">
-          <div class="bullets"><span></span><span></span><span></span></div>
-          <img src="img/catalog-item1.jgp"  width="240" height="240">
-          <div class="catalog-hover">
-            <h4>Aviator</h4>
-            <p>Односторонний макет с авторским дизайном</p>
-            <a href="#">8000 Р.</a>
           </div>
         </div>
-        <div class="catalog-element">
-          <div class="bullets"><span></span><span></span><span></span></div>
-          <img src="img/catalog-item2.jgp"  width="240" height="240">
-          <div class="catalog-hover">
-            <h4>Sunset</h4>
-            <p>Интернет-магазин с личным кабинетом</p>
-            <a href="#">10000 Р.</a>
+          <div class="map-block">
+            <div class="contact">
+              <h4>NЁRDS DESING STUDIO</h4>
+              <p>191186, Санкт-Петербург,<br>
+                ул. Б. Конюшенная, д. 19/8</p>
+                <p>тел. +7(812)275 75 75</p>
+              </div>
+              <div class="adress">
+                <img src="img/map-logo" alt="мы" width="231" height="190">
+              </div>
           </div>
-        </div>
-        <div class="catalog-element">
-          <div class="bullets"><span></span><span></span><span></span></div>
-          <img src="img/catalog-item3.jgp"  width="240" height="240">
-          <div class="catalog-hover">
-            <h4>Forte</h4>
-            <p>Отличный макет для личного блога</p>
-            <a href="#">5000 Р.</a>
+        </main>
+        <footer class="main-footer container">
+          <div class="footer-social">
+            <a class="social-btn social-btn-vk" href="#">Вконтакте</a>
+            <a class="social-btn social-btn-fb" href="#">Фейсбук</a>
+            <a class="social-btn social-btn-inst" href="#">Инстаграм</a>
           </div>
-        </div>
-        <div class="catalog-element">
-          <div class="bullets"><span></span><span></span><span></span></div>
-          <img src="img/catalog-item4.jgp"  width="240" height="240">
-          <div class="catalog-hover">
-            <h4>Modern organic thai</h4>
-            <p>Сайт для ресторана быстрого питания</p>
-            <a href="#">12000 Р.</a>
+          <div class="footer-sale">
+            <b>Давайте дружить, это выгодно!</b>
+            <p>Скидка 10% для друзей из социальных сетей.</p>
           </div>
-        </div>
-        <div class="catalog-element">
-          <div class="bullets"><span></span><span></span><span></span></div>
-          <img src="img/catalog-item5.jgp"  width="239" height="240">
-          <div class="catalog-hover">
-            <h4>Avenue</h4>
-            <p>Макет для блога о путешествиях</p>
-            <a href="#">8000 Р.</a>
-          </div>
-        </div>
-        <div class="catalog-element">
-          <div class="bullets"><span></span><span></span><span></span></div>
-          <img src="img/catalog-item6.jgp"  width="239" height="240">
-          <div class="catalog-hover">
-            <h4>Dovetail</h4>
-            <p>Интернет-магазин с галереей товаров</p>
-            <a href="#">14000 Р.</a>
-          </div>
-        </div>
-        <ul class="pagination">
-            <li>
-              <a class="active" href="#">1</a>
-            </li>
-            <li>
-              <a href="#">2</a>
-            </li>
-            <li>
-              <a href="#">3</a>
-            </li>
-            <li>
-              <a href="#">Следующая</a>
-            </li>
-          </ul>
-      </div>
-    </main>
-    <footer class="main-footer">
-      <div class="map">
-        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=3nikSuskU6FNSs_mEkO0kbYeMEVBToh2&width=100%&height=443&lang=ru_RU&sourceType=constructor&scroll=true"></script>
-      </div>
-      <div class="contact">
-      <h4>NЁRDS DESING STUDIO</h4>
-      <p>191186, Санкт-Петербург,<br>
-          ул. Б. Конюшенная, д. 19/8</p>
-          <p>тел. +7(812)275 75 75</p>
-      </div>
-      <div class="container">
-        <a class="social-btn social-btn-vk" href="#">Вконтакте</a>
-        <a class="social-btn social-btn-fb" href="#">Фейсбук</a>
-        <a class="social-btn social-btn-inst" href="#">Инстаграм</a>
-        <b>Давайте дружить, это выгодно!</b>
-        <p>Скидка 10% для друзей из социальных сетей.</p>
-      </div>
-    </footer>
+        </footer>
   </body>
 </html>

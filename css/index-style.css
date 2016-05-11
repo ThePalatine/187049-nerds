@@ -10,25 +10,25 @@ body{
   font-size: 16px;
   line-height: 22px;
   color: #283136;
-  font-weight: bold;
+  font-weight: 500;
 }
 h1{
   font-size: 36px;
   line-height: 36px;
   color: #000000;
-  font-weight: medium;
+  font-weight: 500;
 }
 h2{
   font-size: 36px;
   line-height: 36px;
   color: #000000;
-  font-weight: medium;
+  font-weight: 500;
 }
 h3{
   font-size: 18px;
   line-height: 30px;
-  color: #283136;
-  font-weight: medium;
+  color: #000000;
+  font-weight: 500;
   text-transform: uppercase;
 }
 h4{
@@ -58,7 +58,8 @@ h4{
 
 }
 .container {
-  width: 900px;
+  position: relative;
+  width: 880px;
   margin: 0 auto;
   padding: 0 10px;
 }
@@ -112,6 +113,7 @@ h4{
   width: 15px;
   height: 15px;
   background-image: url("../img/recycle-bin.png");
+  opacity: 0.3;
 }
 
 a{
@@ -119,7 +121,6 @@ a{
 }
 
 .bottom-slide1 {
-  width: 100%;
 
 }
 .bottom-slide2 {
@@ -128,43 +129,61 @@ a{
 .bottom-slide3 {
 	display: none;
 }
-.slide1-slogan {
-float: left;
+.slogan {
+  float: left;
 	width:380px;
 	height: 195px;
-  margin-top:26;
+  margin-top: -10px;
 }
-.slider-nav {
-margin-top: 30px;
- text-align: center;
+
+.slogan p{
+  margin-top: -12px;
+  margin-bottom: 27px;
 }
+
 .bottom-slide1 img {
 	float: right;
 	width:340px;
 	height: 231px;
 }
 
+.slider-nav {
+  position: absolute;
+  top: 326px;
+  left: 416px;
+}
+
+.slider-nav a{
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 9px;
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+
 .slide-btn{
   display: block;
   width: 240px;
-  height: 40px;
+  height: 38px;
   color: white;
-  background-color: red;
-  border-radius: 5px;
+  background-color: #fb565a;
+  border-radius: 3px;
   text-align: center;
-  font-size: 16px;
+  font-size: 12px;
+  font-weight: normal;
   text-transform: uppercase;
-  line-height: 40px;
+  line-height: 38px;
 }
 
 .suggestions {
+  margin-bottom: 80px;
   text-align: center;
-  margin-bottom: 79px;
+  font-size: 0;
 }
 .sug-block {
   display: inline-block;
   width:240px;
-  height: 350px;
   margin-right: 80px;
   vertical-align: top;
   text-align: left;
@@ -173,64 +192,91 @@ margin-top: 30px;
   margin-right: 0;
 }
 
+.sug-block h3{
+  margin-top: 12px;
+}
+
+.sug-block p{
+  margin-top: -4px;
+  margin-bottom: 26px;
+  font-size: 15px;
+  line-height: 22px;
+}
+
 .sug-btn{
   display: block;
-  width: 125px;
-  height: 40px;
+  width: 140px;
+  height: 38px;
   color: white;
-  background-color: red;
-  border-radius: 5px;
+  background-color: #fb565a;
+  border-radius: 3px;
   text-align: center;
-  font-size: 16px;
+  font-size: 12px;
+  font-weight: normal;
   text-transform: uppercase;
-  line-height: 40px;
+  line-height: 38px;
 }
 
 .green-btn{
-  background-color: green;
+  background-color: #00ca74;
 }
 
 .yellow-btn{
-  background-color: yellow;
+  background-color: #efc84a;
 }
 
 hr {
   background-color: #f4f4f4;
   height: 2px;
   border: none;
+  margin-bottom: 59px;
 }
 .description {
-  margin-top: 59px;
   height: 413;
 }
 .about-us {
   float:left;
-  margin-top: 16px;
-  height: 334px;
-  width: 620px;
+  width: 580px;
+  margin-top: -13px;
 }
+
+.about-us p{
+  margin: -5px 0 42px 0;
+}
+
+.about-us span{
+  text-transform: uppercase;
+}
+
 .description-logo {
   float:right;
   width: 240px;
   height: 350px;
 }
 
-.description ul{
+.description ul,
+.description ul li{
   list-style: none;
+  position: relative;
 }
 
-.description ul li{
-  position: relative;
+.about-us ul{
+  margin-top: 22px;
+  padding-left: 36px;
+}
+
+.about-us ul li{
+  margin-bottom: 22px;
 }
 
 .description ul li::before{
   position: absolute;
-  left: -40px;
-  top: 8px;
+  left: -36px;
+  top: 11px;
   content: "";
-  width: 30px;
-  height: 3px;
-  background-color: #FB3A3F;
+  width: 25px;
+  height: 2px;
+  background-color: #fb565a;
 }
 
 .description-logo img{
@@ -282,7 +328,7 @@ hr {
   margin-top: 40px;
   margin-bottom: auto;
   vertical-align:middle;
-  opacity: 0.5;
+  opacity: 0.2;
 }
 
 .partners img:last-child{

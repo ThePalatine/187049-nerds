@@ -27,8 +27,16 @@ h2{
 h3{
   font-size: 18px;
   line-height: 30px;
-  color: #000000;
+  color: #283136;
   font-weight: medium;
+  text-transform: uppercase;
+}
+h4{
+    font-size: 17px;
+  line-height: 30px;
+  color: #283136;
+  font-weight: medium;
+  text-transform: uppercase;
 }
 .clearfix::after {
   content: "";
@@ -135,6 +143,20 @@ margin-top: 30px;
 	width:340px;
 	height: 231px;
 }
+
+.slide-btn{
+  display: block;
+  width: 240px;
+  height: 40px;
+  color: white;
+  background-color: red;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 16px;
+  text-transform: uppercase;
+  line-height: 40px;
+}
+
 .suggestions {
   text-align: center;
   margin-bottom: 79px;
@@ -142,13 +164,36 @@ margin-top: 30px;
 .sug-block {
   display: inline-block;
   width:240px;
-  height: 300px;
+  height: 350px;
   margin-right: 80px;
-text-align: left;
+  vertical-align: top;
+  text-align: left;
 }
 .sug-block:last-child {
-margin-right: 0;
+  margin-right: 0;
 }
+
+.sug-btn{
+  display: block;
+  width: 125px;
+  height: 40px;
+  color: white;
+  background-color: red;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 16px;
+  text-transform: uppercase;
+  line-height: 40px;
+}
+
+.green-btn{
+  background-color: green;
+}
+
+.yellow-btn{
+  background-color: yellow;
+}
+
 hr {
   background-color: #f4f4f4;
   height: 2px;
@@ -169,6 +214,64 @@ hr {
   width: 240px;
   height: 350px;
 }
+
+.description ul{
+  list-style: none;
+}
+
+.description ul li{
+  position: relative;
+}
+
+.description ul li::before{
+  position: absolute;
+  left: -40px;
+  top: 8px;
+  content: "";
+  width: 30px;
+  height: 3px;
+  background-color: #FB3A3F;
+}
+
+.description-logo img{
+  display: block;
+  margin: 0 auto;
+}
+
+.description-logo b{
+  position:relative;
+  display: block;
+  margin-top: 20px;
+  font-size: 16px;
+  line-height: 30px;
+  color: #283136;
+  font-weight: medium;
+  text-transform: uppercase;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.description-logo b::before{
+  position: absolute;
+  left: 10px;
+  top: 13px;
+  content: "";
+  width: 50px;
+  height: 2px;
+  background-color: grey;
+}
+
+.description-logo b::after{
+  position: absolute;
+  right: 10px;
+  top: 13px;
+  content: "";
+  width: 50px;
+  height: 2px;
+  background-color: grey;
+}
+
+
 .partners{
   text-align: center;
   height: 166px;
@@ -179,6 +282,7 @@ hr {
   margin-top: 40px;
   margin-bottom: auto;
   vertical-align:middle;
+  opacity: 0.5;
 }
 
 .partners img:last-child{
@@ -217,10 +321,38 @@ margin-bottom: 85px;
 .footer-social{
   float: left;
   margin-top: 40px;
-  width: 200px;
   margin-right: 60px;
+  margin-left: 50px;
 }
+
+.social-btn{
+  display: inline-block;
+  width: 50px;
+  height:50px;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+
+.social-btn-vk{
+  background: #eeeeee url("../img/icon-vk.png") no-repeat 50% 50%;
+}
+
+.social-btn-fb{
+  background: #eeeeee url("../img/icon-facebook.png") no-repeat 50% 50%;
+}
+
+.social-btn-inst{
+  background: #eeeeee url("../img/icon-instagramm.png") no-repeat 50% 50%;
+}
+
 .footer-sale{
   float: right;
   margin-top: 40px;
+}
+
+.footer-sale b{
+  font-size: 36px;
+  line-height: 36px;
+  color: #000000;
+  font-weight: medium;
 }

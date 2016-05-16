@@ -342,6 +342,17 @@ a{
   border-radius: 3px;
 }
 
+.submit-selection-btn:hover{
+  background-color: #e5e5e5;
+}
+
+.submit-selection-btn:active{
+  background-color: #d5d5d5;
+  height: 33px;
+  border-top: 5px solid #b5b5b5;
+  line-height: 28px;
+}
+
 .site-catalog{
   float: right;
   width: 560px;
@@ -611,12 +622,14 @@ a{
 }
 /* Реакция кнопок */
 .feedback-btn:hover,
-.submit-btn:hover{
+.submit-btn:hover,
+.element-buy-btn:hover{
   background-color: #d6494d;
 }
 
 .feedback-btn:active,
-.submit-btn:active{
+.submit-btn:active,
+.element-buy-btn:active{
   background-color: #b63538;
   height: 33px;
   border-top: 5px solid #9b2d30;

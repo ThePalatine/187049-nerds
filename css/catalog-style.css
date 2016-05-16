@@ -6,7 +6,7 @@ body {
 }
 
 body{
-  font-family: "Roboto";
+  font-family: "Roboto", "Arial" ,"sans-serif";
   font-size: 16px;
   color: #283136;
   font-weight: 500;

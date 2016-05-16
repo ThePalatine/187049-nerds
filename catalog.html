@@ -3,7 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>Нёрдс</title>
-    <link href="css/catalog-style.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:500,400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/catalog-style.css">
   </head>
   <body>
     <header class="main-header">
@@ -15,13 +17,13 @@
           <nav class="main-navigation">
             <ul>
               <li>
-                <a href="#">Студия</a>
+                <a href="index.html">Студия</a>
               </li>
               <li>
                 <a href="#">Клиенты</a>
               </li>
               <li>
-                <a href="#">Магазин</a>
+                <a class="active" href="#">Магазин</a>
               </li>
               <li>
                 <a href="#">Контакты</a>
@@ -29,24 +31,34 @@
             </ul>
           </nav>
           <div class="user-block">
-            <img src="img/recycle-bin.png" alt="корзина" width="15" height="15">
-            <a class="basket" href="#">Вход</a>
+            <::before>картинка до</::before>
+            <a class="basket" href="#">Корзина</a>
           </div>
         </div>
         <div class="bottom-header">
           <h1>добро пожаловать в магазин<br>
-             готовых макетов.</h1>
+             готовых макетов</h1>
         </div>
       </header>
       <main class="main-block">
         <div class="above-map container clearfix">
           <div class="site-selection">
-            <form action="http://nerds.ru" method="post">
+            <form action="form.php" method="get">
               <b>Стоимость:</b>
-              <input type="range" min="0" max="15000" step="1">
-              <lable for="cost">От</lable><input type="text" id="cost" value="0">
-              <lable for="cost">до</lable><input type="text" id="cost" value="15000">
-              <b class="selection-grid">Производители:</b>
+              <div class="range-filter">
+                <div class="range-controls">
+                  <div class="scale">
+                    <div class="bar" style="margin-left: 0%; width: 70%"></div>
+                  </div>
+                  <div class="toggle toggle-min"></div>
+                  <div class="toggle toggle-max"></div>
+                </div>
+                <div class="price-controls">
+                  <label class="min-price">от <input name="min-price" type="text" value="0"></label>
+                  <label class="max-price">до <input name="max-price" type="text" value="15000"></label>
+                </div>
+              </div>
+              <b class="selection-grid">Сетка:</b>
               <input type="radio" name="site-grid" value="adaptive" id="adaptive"><label for="adaptive">Адаптивная</label>
               <input type="radio" name="site-grid" value="fixed" id="fixed" checked><label for="fixed">Фиксированная для ухода</label>
               <input type="radio" name="site-grid" value="elastic" id="elastic"><label for="elastic">Резиновая</label>
@@ -75,7 +87,7 @@
               </div>
               <img src="img/catalog-item1.jgp"  width="240" height="240">
               <div class="catalog-hover">
-                <h4>Aviator</h4>
+                <h2>Aviator</h2>
                 <p>Односторонний макет с авторским дизайном</p>
                 <a href="#">8000 Р.</a>
               </div>
@@ -84,7 +96,7 @@
               <div class="bullets"><span></span><span></span><span></span></div>
               <img src="img/catalog-item2.jgp"  width="240" height="240">
               <div class="catalog-hover">
-                <h4>Sunset</h4>
+                <h2>Sunset</h2>
                 <p>Интернет-магазин с личным кабинетом</p>
                 <a href="#">10000 Р.</a>
               </div>
@@ -93,7 +105,7 @@
               <div class="bullets"><span></span><span></span><span></span></div>
               <img src="img/catalog-item3.jgp"  width="240" height="240">
               <div class="catalog-hover">
-                <h4>Forte</h4>
+                <h2>Forte</h2>
                 <p>Отличный макет для личного блога</p>
                 <a href="#">5000 Р.</a>
               </div>
@@ -102,7 +114,7 @@
               <div class="bullets"><span></span><span></span><span></span></div>
               <img src="img/catalog-item4.jgp"  width="240" height="240">
               <div class="catalog-hover">
-                <h4>Modern organic thai</h4>
+                <h2>Modern organic thai</h2>
                 <p>Сайт для ресторана быстрого питания</p>
                 <a href="#">12000 Р.</a>
               </div>
@@ -111,7 +123,7 @@
               <div class="bullets"><span></span><span></span><span></span></div>
               <img src="img/catalog-item5.jgp"  width="239" height="240">
               <div class="catalog-hover">
-                <h4>Avenue</h4>
+                <h2>Avenue</h2>
                 <p>Макет для блога о путешествиях</p>
                 <a href="#">8000 Р.</a>
               </div>
@@ -120,7 +132,7 @@
               <div class="bullets"><span></span><span></span><span></span></div>
               <img src="img/catalog-item6.jgp"  width="239" height="240">
               <div class="catalog-hover">
-                <h4>Dovetail</h4>
+                <h2>Dovetail</h2>
                 <p>Интернет-магазин с галереей товаров</p>
                 <a href="#">14000 Р.</a>
               </div>
@@ -141,28 +153,67 @@
             </ul>
           </div>
         </div>
-          <div class="map-block">
-            <div class="contact">
-              <h4>NЁRDS DESING STUDIO</h4>
-              <p>191186, Санкт-Петербург,<br>
-                ул. Б. Конюшенная, д. 19/8</p>
-                <p>тел. +7(812)275 75 75</p>
-              </div>
-              <div class="adress">
-                <img src="img/map-logo" alt="мы" width="231" height="190">
-              </div>
+        <div class="map-block">
+          <div class="contact">
+          <h4>NЁRDS DESING STUDIO</h4>
+          <p>191186, Санкт-Петербург,<br>
+              ул. Б. Конюшенная, д. 19/8</p>
+              <p>тел. +7 (812) 275-75-75</p>
+              <a class="feedback-btn" href="#">Напишите нам</a>
           </div>
+          <div class="adress">
+            <img src="img/map-logo.png" alt="мы" width="231" height="190">
+          </div>
+          <div class="modal-feedback">
+            <button class="modal-feedback-close" type="button" title="Закрыть">Закрыть</button>
+            <form class="feedback-mail" action="#" method="post">
+              <label class="name-block">
+                <span>Ваше имя:</span>
+                <input class="name-field" type="text" name="name" placeholder="представьтесь, пожалуйста" width="216" required>
+              </label>
+              <label class="mail-block">
+                <span>Ваш e-mail:</span>
+                <input class="mail-field" type="text"  name="e-mail" placeholder="для отправки ответа" required>
+              </label>
+              <label class="comment-block">
+                <span>Текст письма:</span>
+                <textarea class="comment-field"  rows="5"  name="comment" placeholder="в свободной форме"></textarea>
+              </label>
+              <button class="submit-btn" type="submit">Отправить</button>
+            </form>
+          </div>
+        </div>
         </main>
-        <footer class="main-footer container">
-          <div class="footer-social">
-            <a class="social-btn social-btn-vk" href="#">Вконтакте</a>
-            <a class="social-btn social-btn-fb" href="#">Фейсбук</a>
-            <a class="social-btn social-btn-inst" href="#">Инстаграм</a>
-          </div>
-          <div class="footer-sale">
-            <b>Давайте дружить, это выгодно!</b>
-            <p>Скидка 10% для друзей из социальных сетей.</p>
-          </div>
-        </footer>
+      <footer class="main-footer container">
+        <div class="footer-social">
+          <a class="social-btn social-btn-vk" href="#"></a>
+          <a class="social-btn social-btn-fb" href="#"></a>
+          <a class="social-btn social-btn-inst" href="#"></a>
+        </div>
+        <div class="footer-sale">
+          <b>Давайте дружить, это выгодно!</b>
+          <p>Скидка 10% для друзей из социальных сетей.</p>
+        </div>
+      </footer>
+      <script>
+        var link = document.querySelector(".feedback-btn");
+
+        var popup = document.querySelector(".modal-feedback");
+        var close = popup.querySelector(".modal-feedback-close");
+
+        var form = popup.querySelector("form");
+        var login = popup.querySelector("[name=name]");
+
+        link.addEventListener("click", function(event) {
+          event.preventDefault();
+          popup.classList.add("modal-feedback-show");
+          login.focus();
+        });
+
+        close.addEventListener("click", function(event) {
+          event.preventDefault();
+          popup.classList.remove("modal-feedback-show");
+        });
+      </script>
   </body>
 </html>

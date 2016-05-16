@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>Нёрдс</title>
+    <title>Каталог</title>
     <link href='https://fonts.googleapis.com/css?family=Roboto:500,400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/catalog-style.css">
@@ -58,17 +58,21 @@
                   <label class="max-price">до <input name="max-price" type="text" value="15000"></label>
                 </div>
               </div>
-              <b class="selection-grid">Сетка:</b>
-              <input type="radio" name="site-grid" value="adaptive" id="adaptive"><label for="adaptive">Адаптивная</label>
-              <input type="radio" name="site-grid" value="fixed" id="fixed" checked><label for="fixed">Фиксированная для ухода</label>
-              <input type="radio" name="site-grid" value="elastic" id="elastic"><label for="elastic">Резиновая</label>
-              <b class="selection-features">Особенности:</b>
-              <input type="checkbox" id="slider" checked><label for="slider">Слайдер</label>
-              <input type="checkbox" id="block"><label for="block">Блок преимуществ</label>
-              <input type="checkbox" id="news" checked><label for="news">Новости</label>
-              <input type="checkbox" id="gallery"><label for="gallery">Галерея</label>
-              <input type="checkbox" id="basket"><label for="basket">Корзина</label>
-              <button type="submit">Показать</button>
+              <div class="grids">
+	        <b class="selection-grid">Сетка:</b>
+                <span class="active">Адаптивная</span>
+                <span>Фиксированная для ухода</span>
+                <span>Резиновая</span>
+              </div>
+              <div class="features">
+                <b class="selection-features">Особенности:</b>
+                <span class="active">Слайдер</span>
+                <span>Блок преимуществ</span>
+                <span class="active">Новости</span>
+                <span>Галерея</span>
+                <span>Корзина</span>
+                <button class="submit-selection-btn" type="submit">Показать</button>
+              </div>
             </form>
           </div>
           <div class="site-catalog">
@@ -85,7 +89,7 @@
             <div class="catalog-element">
               <div class="bullets"><span></span><span></span><span></span>
               </div>
-              <img src="img/catalog-item1.jgp"  width="240" height="240">
+              <img src="img/catalog-item1.jpg"  width="240" height="240">
               <div class="catalog-hover">
                 <h2>Aviator</h2>
                 <p>Односторонний макет с авторским дизайном</p>
@@ -94,7 +98,7 @@
             </div>
             <div class="catalog-element">
               <div class="bullets"><span></span><span></span><span></span></div>
-              <img src="img/catalog-item2.jgp"  width="240" height="240">
+              <img src="img/catalog-item2.jpg"  width="240" height="240">
               <div class="catalog-hover">
                 <h2>Sunset</h2>
                 <p>Интернет-магазин с личным кабинетом</p>
@@ -103,7 +107,7 @@
             </div>
             <div class="catalog-element">
               <div class="bullets"><span></span><span></span><span></span></div>
-              <img src="img/catalog-item3.jgp"  width="240" height="240">
+              <img src="img/catalog-item3.jpg"  width="240" height="240">
               <div class="catalog-hover">
                 <h2>Forte</h2>
                 <p>Отличный макет для личного блога</p>
@@ -112,7 +116,7 @@
             </div>
             <div class="catalog-element">
               <div class="bullets"><span></span><span></span><span></span></div>
-              <img src="img/catalog-item4.jgp"  width="240" height="240">
+              <img src="img/catalog-item4.jpg"  width="240" height="240">
               <div class="catalog-hover">
                 <h2>Modern organic thai</h2>
                 <p>Сайт для ресторана быстрого питания</p>
@@ -121,7 +125,7 @@
             </div>
             <div class="catalog-element">
               <div class="bullets"><span></span><span></span><span></span></div>
-              <img src="img/catalog-item5.jgp"  width="239" height="240">
+              <img src="img/catalog-item5.jpg"  width="239" height="240">
               <div class="catalog-hover">
                 <h2>Avenue</h2>
                 <p>Макет для блога о путешествиях</p>
@@ -130,7 +134,7 @@
             </div>
             <div class="catalog-element">
               <div class="bullets"><span></span><span></span><span></span></div>
-              <img src="img/catalog-item6.jgp"  width="239" height="240">
+              <img src="img/catalog-item6.jpg"  width="239" height="240">
               <div class="catalog-hover">
                 <h2>Dovetail</h2>
                 <p>Интернет-магазин с галереей товаров</p>
@@ -197,19 +201,15 @@
       </footer>
       <script>
         var link = document.querySelector(".feedback-btn");
-
         var popup = document.querySelector(".modal-feedback");
         var close = popup.querySelector(".modal-feedback-close");
-
         var form = popup.querySelector("form");
         var login = popup.querySelector("[name=name]");
-
         link.addEventListener("click", function(event) {
           event.preventDefault();
           popup.classList.add("modal-feedback-show");
           login.focus();
         });
-
         close.addEventListener("click", function(event) {
           event.preventDefault();
           popup.classList.remove("modal-feedback-show");

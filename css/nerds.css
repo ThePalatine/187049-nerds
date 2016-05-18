@@ -151,6 +151,7 @@ h4{
   display: inline-block;
   float: right;
   position: relative;
+  padding-top: 25px;
   vertical-align: text-bottom;
 }
 
@@ -159,7 +160,7 @@ h4{
 
 .user-block a::before{
   position: absolute;
-  top: 6px;
+  top: 31px;
   left: -27px;
   content: "";
   width: 15px;

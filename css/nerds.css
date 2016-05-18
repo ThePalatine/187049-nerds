@@ -789,7 +789,7 @@ margin-bottom: 85px;
   display: inline-block;
   width: 240px;
   margin-bottom: 80px;
-  padding-top: 30px;
+  margin-top: 30px;
   background-color: #2d2214;
 }
 
@@ -836,7 +836,7 @@ margin-bottom: 85px;
   position: absolute;
   content: "";
   left: 0;
-  top: 0;
+  top: -30px;
 
 
   width: 240px;

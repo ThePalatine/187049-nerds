@@ -149,6 +149,7 @@ h4{
 
 .user-block {
   display: inline-block;
+  float: right;
   position: relative;
   vertical-align: text-bottom;
 }
